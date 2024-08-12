@@ -7,7 +7,7 @@ This project is a versatile web-based application that allows users to engage in
 ## Features
 
 - **Local Co-op Mode**: Play with a friend on the same device.
-- **Single Player Mode**: Play against the computer with enhanced AI.
+- **Single Player Mode**: Play against the computer AI.
 - **Online Mode**: Connect and play with other players online.
 - **Responsive Design**: Optimized for both desktop and mobile devices.
 - **Real-Time Gameplay**: Smooth and seamless gaming experience across all modes.
@@ -27,7 +27,7 @@ https://github.com/user-attachments/assets/6df98d28-c398-4ad1-8efc-22d00cca9fdf
 
 ### Single Player Mode
 - Navigate to the Single Player section.
-- Play against the computer with progressively challenging AI.
+- Play against the computer with AI.
 
 ### Online Mode
 #### (Currently Unavailable due to lack of Server Resources)
