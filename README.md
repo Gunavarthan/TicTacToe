@@ -15,7 +15,7 @@ This project is a versatile web-based application that allows users to engage in
 
 ## Demo
 
-- **Live Demo**: Check out the [demo website](https://gunavarthan.github.io/TicTacToe/HTML/MainMenue.html) to experience the game.
+- **Live Demo**: Check out the [Tic Tac Toe](https://gunavarthan.github.io/TicTacToe/HTML/MainMenue.html) to experience the game.
 
 https://github.com/user-attachments/assets/6df98d28-c398-4ad1-8efc-22d00cca9fdf
 
@@ -34,6 +34,7 @@ https://github.com/user-attachments/assets/6df98d28-c398-4ad1-8efc-22d00cca9fdf
 - Navigate to the Online Mode section.
 - Connect with players online and engage in real-time gameplay.
 - Use of QR code / Room ID to connect to a session.
+- The online Mode can be accessed by recreating the database
 
 ### Other Instructions
 - Ensure your internet connection is active for Online Mode.
@@ -47,6 +48,22 @@ https://github.com/user-attachments/assets/6df98d28-c398-4ad1-8efc-22d00cca9fdf
 - **AJAX**: Asynchronous data loading and real-time updates.
 - **PHP**: Server-side scripting and database interaction.
 - **MySQL**: Database management for user data and game records.
+
+## SQL Queries to Recreate Online Mode
+```sql
+CREATE TABLE `sessions` (
+  `session_id` int NOT NULL,
+  `start_time` datetime NOT NULL,
+  `end_time` datetime NOT NULL,
+  PRIMARY KEY (`session_id`)
+)
+
+CREATE TABLE `board` (
+  `cell_index` int NOT NULL,
+  `value` varchar(1) DEFAULT NULL,
+  PRIMARY KEY (`cell_index`)
+) 
+```
 
 ## License
 
