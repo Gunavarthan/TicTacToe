@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <script src="../JS/Main.JS"></script>
+    <script src="../JS/jquery-3.7.1.min.js"></script>
+
+    <style>
+        body
+        {
+            background-color: rgba(255, 228, 196,0.5);
+            margin:0;
+            padding:0;
+            height:100vh;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class = "board">
+        <div class="cell" id="0"></div>
+        <div class="cell" id="1"></div>
+        <div class="cell" id="2"></div>
+        <div class="cell" id="3"></div>
+        <div class="cell" id="4"></div>
+        <div class="cell" id="5"></div>
+        <div class="cell" id="6"></div>
+        <div class="cell" id="7"></div>
+        <div class="cell" id="8"></div>
+        <div class="line vertical"></div>
+        <div class="line vertical"></div>
+        <div class="line horizontal"></div>
+        <div class="line horizontal"></div>
+    </div>
+    <button class="tab-button" onclick="clearBoard()">restart</button>
+    <div class="winner-announcement" id="winnerAnnouncement"><center><span id="disp-message"></span><span id="disp-data"></span></center></div>
+</body>
+</html>

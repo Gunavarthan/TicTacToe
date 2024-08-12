@@ -1,0 +1,287 @@
+/* Font Face */
+@font-face {
+    font-family: 'comical';
+    src: url(../Assets/good_bakwan/Good\ Bakwan.otf);
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/*************/
+/* Main Menu */
+/*************/
+
+.main-container {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+    padding: 100px;
+    border: 2px solid rgb(255,255,255);
+    border-radius: 20px;
+    height:35%;
+    width:10%;
+    background-color: rgba(255, 208, 150,0.8);
+    box-shadow: 0 4px 8px rgba(149, 103, 184,0.5); 
+}
+
+.main-container button
+{
+    margin: 10px; 
+    padding: 10px 20px; 
+    border: none;
+    border-radius: 3px;
+    background-color: rgba(149, 103, 184,0.5); 
+    color: white;
+    font-family: "comical";
+    font-size: 16px;
+    cursor: pointer;
+    transition:cubic-bezier(0.165, 0.84, 0.44, 1) 0.2s;
+}
+
+.main-container button:hover
+{
+    background-color: rgba(149, 103, 184,1); 
+    font-size: 20px;
+    transition:cubic-bezier(0.165, 0.84, 0.44, 1) 0.2s;
+}
+
+.main-container .title
+{
+    margin-bottom: 20px;
+    font-family: "comical";
+    font-size: 24px; 
+    color: rgba(149, 103, 230, 1); 
+    background-color: rgba(255, 208, 150, 01); 
+    padding: 10px 20px; 
+    box-shadow : 0px 3px rgba(255,255,255,5);
+    transition:cubic-bezier(0.165, 0.84, 0.44, 1) 0.5s;
+}
+
+.main-container .title:hover
+{
+    transition:cubic-bezier(0.165, 0.84, 0.44, 1) 0.5s;
+    font-size: 30px;
+    background-color: rgb(243, 186, 116); 
+    color: rgb(170, 123, 252); 
+}
+
+/********/
+/* Game */
+/********/
+
+.board
+{
+    left: 50% ;
+    top : 50% ;
+    transform: translate(-50%,-50%);
+    display : flex ;
+    position : absolute ;
+    width  : 600px ;
+    height : 600px ;
+    background-color : rgba(255, 208, 150,0.8) ;
+    display : grid ;
+    grid-template-columns : repeat(3,1fr) ;
+    grid-template-rows: repeat(3,1fr) ; 
+    gap : 0 ;   
+}
+
+@media screen and (max-width:600px)
+{
+    .board
+    {
+        width  : 400px ;
+        height : 400px ;
+    }
+
+    .tab-button
+    {
+        display:none;
+    }
+}
+
+/* Cells */
+.cell
+{
+    display : flex ;
+    justify-content: center ;
+    align-items: center ;
+    cursor : pointer ;
+    font-family: 'comical';
+    font-size: 50px;
+}
+
+/* Lines */
+.line
+{
+    position : absolute ;
+    background-color: rgba(149, 103, 230, 1) ;
+    width  : 5px ;
+    height : 100% ;
+}
+
+.line.horizontal
+{
+    width  : 100% ;
+    height : 5px ;
+}
+
+.line.vertical:nth-child(10)
+{
+    left : calc(33.33% - 2.5px) ;
+}
+
+.line.vertical:nth-child(11)
+{
+    left : calc(66.66% - 2.5px) ;
+}
+
+.line.horizontal:nth-child(12)
+{
+    top : calc(33.33% - 2.5px) ;
+}
+
+.line.horizontal:nth-child(13)
+{
+    top : calc(66.66% - 2.5px) ;
+}
+
+.tab-button
+{
+    margin: 10px; 
+    padding: 10px 20px; 
+    border: none;
+    border-radius: 3px;
+    background-color: rgba(149, 103, 184,0.5); 
+    color: white;
+    font-size: 16px;
+    font-family: "comical";
+    cursor: pointer;
+    position : absolute ;
+    bottom : 5%;
+}
+
+.tab-button:hover
+{
+    background-color: rgba(149, 103, 184,1);
+}
+
+/* Winning */
+
+.winner-announcement {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-family: 'comical';
+    padding: 20px;
+    height : 250px;
+    width  : 280px;
+    border-radius: 10px;
+    border: 2px solid rgb(255,255,255);
+    text-align: center;
+    display: none;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.5s ease-in-out; /* Transition effect */
+}
+
+#disp-message {
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+#disp-data {
+    display: block;
+    font-size: 6rem;
+}
+
+.winner-announcement button
+{
+    margin: 10px; 
+    font-family: "comical";
+    padding: 10px 20px; 
+    border: none;
+    border-radius: 3px;
+    background-color: rgba(149, 103, 184,0.5); 
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 4%;
+    left:35%;
+}
+
+.winner-announcement button:hover
+{
+    background-color: rgba(149, 103, 184,1); 
+}
+
+.winner-announcement input[type="number"]
+{
+    position: absolute;
+    font-family: "comical";
+    margin: 10px; 
+    padding: 10px 20px;
+    transform: translate(-50%, -50%); 
+    bottom: 40%;
+    left:50%;
+    font-size: xx-large;
+    width:50%;
+    border-radius: 8px;
+    background-color: rgba(255, 208, 150,0.8);
+    color:white;
+    
+}
+
+.winner-announcement input[type="number"]::placeholder
+{
+    color:white;
+    font-family: "comical";
+    font-size: large;
+}
+
+#Host-Button
+{
+    position : absolute;
+    background-color: rgba(27, 209, 200, 0.8);
+    bottom:40%;
+    left:60%;
+}
+
+#Enter-Button
+{
+    position : absolute;
+    background-color: rgba(209, 27, 42, 0.8);
+    bottom:40%;
+    left:10%;
+}
+
+
+#QR-image,#sessionID,#Continue-Button
+{
+    display: none;
+}
+
+#Session
+{
+    position: absolute;
+    bottom:20%;
+    font-family: 'comical';
+    font-size: xx-large;
+    left:25%;
+}
+
+
+

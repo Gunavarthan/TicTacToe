@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <script src="../JS/Main.JS"></script> 
+    <script src="../JS/MainMenue.js"></script>
+    <script src="../JS/jquery-3.7.1.min.js"></script>
+    <style>
+        body
+        {
+            background-color: rgb(255, 228, 196);
+            margin:0;
+            padding:0;
+            height:100%;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class = "main-container">
+        <h4 class="title"> Play Mode:</h4>
+        <button id="local" onclick="redirectTo('../HTML/LC_game.html')">Local Co-Op</button>
+        <button id="Online">Online Co-Op</button>
+        <button id="Single" onclick="redirectTo('../HTML/SP_game.html')">Single Player</button>
+    </div>
+    <div class="winner-announcement" id="QR-Scan" style="height:400px;width:400px;color:black;background-color: azure;">
+        <img id="QR-image" alt="QR Code" style="height: 200px; width: 200px; position: absolute; left: 50%; top:30%; transform: translate(-50%, -50%);">
+        <input type="number" id="sessionID" placeholder="Enter the Room Code...">
+        <button id="Continue-Button">Continue</button>
+        <button id="Host-Button">Create Room</button>
+        <button id="Enter-Button">Enter Room</button>
+        <center><span id="Session"></span></center>
+    </div>
+</body>
+</html>
