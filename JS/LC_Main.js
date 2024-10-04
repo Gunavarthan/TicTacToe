@@ -56,7 +56,7 @@ function validate(board)
         announceWinner(winner, "Winner !!")
         winner = null;
         
-    } else if (count == 0) {
+    } else if (!board.includes("")) {
         announceWinner("Draw", "The game Ended in a...");
     }
 }
